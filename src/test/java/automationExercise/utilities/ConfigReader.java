@@ -1,4 +1,4 @@
-package utilities;
+package automationExercise.utilities;
 
 
 import java.io.FileInputStream;
