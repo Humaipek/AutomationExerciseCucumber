@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = {"automationExercise/stepDefinitions","automationExercise/hooks"},
-        tags = "@TC02",
+        tags = "@TC10",
         dryRun = false,
         monochrome = false
 )

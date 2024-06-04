@@ -6,18 +6,19 @@ import automationExercise.utilities.Driver;
 import com.github.javafaker.Faker;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import org.junit.Ignore;
 import org.openqa.selenium.Keys;
 
 public class Hook {
 
-    @After
+   @After
     public void tearDown() throws Exception {
         Driver.getDriver().close();
     }
     public static Faker faker = new Faker();
     public static String email;
     public static String password;
-    @Before("@TC02")
+    @Before("@TC02 or @TC04 or @TC05")
     public void registerAccount() throws Exception {
         AutomationExercisePage automationExercisePage=new AutomationExercisePage();
         email=faker.internet().emailAddress();

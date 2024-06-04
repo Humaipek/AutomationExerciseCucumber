@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class AutomationExercisePage {
     public AutomationExercisePage() {
         PageFactory.initElements(Driver.getDriver(),this);
@@ -75,6 +77,95 @@ public class AutomationExercisePage {
 
     @FindBy(css = "button[data-qa='login-button']")
     public WebElement loginButton;
+
+    @FindBy(xpath = "//form/p[.='Your email or password is incorrect!']")
+    public WebElement yourEmailOrPasswordIsIncorrect;
+
+    @FindBy(partialLinkText = "Logout")
+    public WebElement logoutButton;
+
+    @FindBy(xpath = "//*[.='Email Address already exist!']")
+    public WebElement emailExist;
+
+    @FindBy(partialLinkText = "Contact us")
+    public WebElement contactUs;
+
+    @FindBy(xpath = "(//h2)[2]")
+    public WebElement getInTouch;
+
+    @FindBy(css = "input[data-qa='name']")
+    public WebElement contactName;
+
+    @FindBy(css = "input[name='upload_file']")
+    public WebElement fileInput;
+
+    @FindBy(css = "input[value='Submit']")
+    public WebElement submit;
+
+    @FindBy(css = "div[style='display: block;']")
+    public WebElement actualSuccess;
+
+    @FindBy(xpath = "//a/span[.=' Home']")
+    public WebElement homeButton;
+
+    @FindBy(partialLinkText = "Test Cases")
+    public WebElement testCasesButton;
+
+    @FindBy(partialLinkText = "Products")
+    public WebElement productsButton;
+
+    @FindBy(xpath = "//*[.='All Products']")
+    public WebElement allProductsText;
+
+    @FindBy(xpath = "//div[@class='productinfo text-center']/img")
+    public List<WebElement> allProducts;
+
+    @FindBy(partialLinkText = "View Product")
+    public WebElement viewProduct;
+
+    @FindBy(xpath = "(//h2)[3]")
+    public WebElement productName;
+
+    @FindBy(xpath = "(//p)[3]")
+    public WebElement productCategory;
+
+    @FindBy(xpath = "(//span)[13]")
+    public WebElement productPrice;
+
+    @FindBy(xpath = "//*[.='Availability:']")
+    public WebElement productAvailability;
+
+    @FindBy(xpath = "//*[.='Condition:']")
+    public WebElement productCondition;
+
+    @FindBy(xpath = "//*[.='Brand:']")
+    public WebElement productBrand;
+
+    @FindBy(id = "search_product")
+    public WebElement searchInput;
+
+    @FindBy(id= "submit_search")
+    public WebElement searchButton;
+
+    @FindBy(xpath= "//h2[.='Searched Products']")
+    public WebElement searchedProducts;
+
+    @FindBy(xpath = "//div[@class='product-image-wrapper']")
+    public List<WebElement> allProductsRelated;
+
+    @FindBy(xpath= "//h2[.='Subscription']")
+    public WebElement subscription;
+
+    @FindBy(id= "susbscribe_email")
+    public WebElement subscriptionEmail;
+
+    @FindBy(id= "subscribe")
+    public WebElement arrowButton;
+
+    @FindBy(xpath= "//div[.='You have been successfully subscribed!']")
+    public WebElement subscribedSuccessfully;
+
+
 
 
 
