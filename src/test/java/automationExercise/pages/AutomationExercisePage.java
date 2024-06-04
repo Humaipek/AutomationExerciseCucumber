@@ -64,6 +64,18 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//p[.='Consent']")
     public WebElement cookieConsent;
 
+    @FindBy(xpath = "//h2[.='Login to your account']")
+    public WebElement loginToYourAccount;
+
+    @FindBy(css = "input[data-qa='login-email']")
+    public WebElement loginMail;
+
+    @FindBy(css = "input[data-qa='login-password']")
+    public WebElement loginPassword;
+
+    @FindBy(css = "button[data-qa='login-button']")
+    public WebElement loginButton;
+
 
 
 

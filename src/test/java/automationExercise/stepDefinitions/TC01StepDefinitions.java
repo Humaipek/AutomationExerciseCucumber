@@ -40,9 +40,9 @@ public class TC01StepDefinitions {
 
     @When("Enter name and email address")
     public void enterNameAndEmailAddress() {
+
         automationExercisePage.signUpName.sendKeys(faker.name().firstName(), Keys.TAB,
                 faker.internet().emailAddress());
-
     }
 
     @And("Click 'Signup' button")
@@ -113,8 +113,9 @@ public class TC01StepDefinitions {
         automationExercisePage.deleteAccountButton.click();
     }
     @Then("Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button")
-    public void verifyThatACCOUNTDELETEDIsVisible() {
+    public void verifyThatACCOUNTDELETEDIsVisibleAndClickContinueButton() {
        Assert.assertTrue(automationExercisePage.deleteAccountText.isDisplayed());
+        automationExercisePage.continueButton.click();
     }
 
 

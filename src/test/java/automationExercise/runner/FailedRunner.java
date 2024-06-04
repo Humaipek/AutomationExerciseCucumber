@@ -14,11 +14,10 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:TestOutput/failed.scenario.txt"
         },
-        features = "src/test/resources/features",
+        features = "@TestOutput/failed.scenario.txt",
         glue = {"automationExercise/stepDefinitions","automationExercise/hooks"},
-        tags = "@TC02",
         dryRun = false,
         monochrome = false
 )
-public class Runner {
+public class FailedRunner {
 }
