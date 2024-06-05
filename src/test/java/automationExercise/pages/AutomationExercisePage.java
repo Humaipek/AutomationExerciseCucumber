@@ -207,6 +207,87 @@ public class AutomationExercisePage {
     @FindBy(xpath= "//button[@class='disabled']")
     public WebElement exactQuantity;
 
+    @FindBy(partialLinkText= "Add to cart")
+    public WebElement addToCart;
+
+    @FindBy(partialLinkText= "Proceed To Checkout")
+    public WebElement proceedToCheckout;
+
+    @FindBy(xpath= "//*[.='Address Details']")
+    public WebElement addressDetails;
+
+    @FindBy(xpath= "//*[.='Review Your Order']")
+    public WebElement reviewYourOrder;
+
+    @FindBy(name= "message")
+    public WebElement textArea;
+
+    @FindBy(partialLinkText= "Place Order")
+    public WebElement placeOrder;
+
+
+    @FindBy(name= "name_on_card")
+    public WebElement nameOnCard;
+
+    @FindBy(xpath= "//b[.='Account Created!']")
+    public WebElement accountCreated;
+
+    @FindBy(xpath= "//*[.='Shopping Cart']")
+    public WebElement cartPage;
+
+    @FindBy(partialLinkText= "Register / Login")
+    public WebElement registerLogin;
+
+    @FindBy(xpath= "//b[.='Account Deleted!']")
+    public WebElement accountDeleted;
+
+    @FindBy(id= "submit")
+    public WebElement confirmOrderButton;
+
+    @FindBy(xpath= "(//form[1])/div[4]")
+    public WebElement successMessage;
+
+    @FindBy(xpath= "//tbody/tr/td/a/i")
+    public WebElement xButton;
+
+    @FindBy(tagName= "tbody")
+    public List<WebElement> productsList;
+
+    @FindBy(xpath= "//h2[.='Category']")
+    public WebElement categories;
+
+    @FindBy(css= "a[href='#Women']")
+    public WebElement womenCategory;
+
+    @FindBy(xpath= "//a[.='Dress '][1]")
+    public WebElement dressCategory;
+
+    @FindBy(xpath= "//h2[.='Women - Dress Products']")
+    public WebElement womenDressProducts;
+
+    @FindBy(css= "a[href='#Men']")
+    public WebElement menCategory;
+
+    @FindBy(xpath= "(//a[.='Tshirts '])[1]")
+    public WebElement tshirtsCategory;
+
+    @FindBy(xpath= "//*[.='Brands']")
+    public WebElement brands;
+
+    @FindBy(xpath= "//a[@href='/brand_products/Polo']")
+    public WebElement brandName;
+
+    @FindBy(xpath= "//div[@class='productinfo text-center']/img")
+    public List<WebElement> allBrandProducts;
+
+    @FindBy(xpath= "//a[@href='/brand_products/H&M']")
+    public WebElement brandLink;
+
+    @FindBy(xpath= "//div[@class='productinfo text-center']/img")
+    public List<WebElement> allProductsOtherPage;
+
+    @FindBy(xpath= "//div[@class='productinfo text-center']/a")
+    public List<WebElement> addProductsToCart;
 
 
 

@@ -18,7 +18,7 @@ public class Hook {
     public static Faker faker = new Faker();
     public static String email;
     public static String password;
-    @Before("@TC02 or @TC04 or @TC05")
+    @Before("@TC02 or @TC04 or @TC05 or @TC16 or @TC20")
     public void registerAccount() throws Exception {
         AutomationExercisePage automationExercisePage=new AutomationExercisePage();
         email=faker.internet().emailAddress();
