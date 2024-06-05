@@ -165,6 +165,48 @@ public class AutomationExercisePage {
     @FindBy(xpath= "//div[.='You have been successfully subscribed!']")
     public WebElement subscribedSuccessfully;
 
+    @FindBy(partialLinkText= "Cart")
+    public WebElement cartButton;
+
+    @FindBy(xpath= "//a[@data-product-id='1']")
+    public WebElement firstProduct;
+
+    @FindBy(xpath= "//button[.='Continue Shopping']")
+    public WebElement continueShoppingButton;
+
+    @FindBy(xpath= "//a[@data-product-id='2']")
+    public WebElement secondProduct;
+
+    @FindBy(xpath= "//u[.='View Cart']")
+    public WebElement viewCartButton;
+
+    @FindBy(xpath= "(//td[@class='cart_price']/p)[1]")
+    public WebElement firstPrice;
+
+    @FindBy(xpath= "(//td[@class='cart_price']/p)[2]")
+    public WebElement secondPrice;
+
+    @FindBy(xpath= "(//button[@class='disabled'])[1]")
+    public WebElement firstQuantity;
+
+    @FindBy(xpath= "(//button[@class='disabled'])[2]")
+    public WebElement secondQuantity;
+
+    @FindBy(xpath= "(//p[@class='cart_total_price'])[1]")
+    public WebElement firstPriceTotal;
+
+    @FindBy(xpath= "(//p[@class='cart_total_price'])[2]")
+    public WebElement secondPriceTotal;
+
+    @FindBy(xpath= "//input[@id='quantity']")
+    public WebElement quantity;
+
+    @FindBy(xpath= "//button[@type='button']")
+    public WebElement addToCartButton;
+
+    @FindBy(xpath= "//button[@class='disabled']")
+    public WebElement exactQuantity;
+
 
 
 
