@@ -2,13 +2,13 @@ package automationExercise.stepDefinitions;
 
 import automationExercise.pages.AutomationExercisePage;
 import automationExercise.utilities.Driver;
-import automationExercise.utilities.WaitUtils;
+import automationExercise.utilities.ReusableMethods;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
-public class TC19StepDefinitions {
+public class TC19StepDefinitions extends ReusableMethods {
     AutomationExercisePage automationExercisePage=new AutomationExercisePage();
     @Then("Verify that Brands are visible on left side bar")
     public void verifyThatBrandsAreVisibleOnLeftSideBar() {
@@ -18,7 +18,7 @@ public class TC19StepDefinitions {
     @When("Click on any brand name")
     public void clickOnAnyBrandName() {
         automationExercisePage.brandName.click();
-        WaitUtils.waitFor(3);
+        waitFor(3);
     }
 
     @Then("Verify that user is navigated to brand page and brand products are displayed")
@@ -33,7 +33,7 @@ public class TC19StepDefinitions {
     @When("On left side bar, click on any other brand link")
     public void onLeftSideBarClickOnAnyOtherBrandLink() {
         automationExercisePage.brandLink.click();
-        WaitUtils.waitFor(3);
+        waitFor(3);
     }
 
     @Then("Verify that user is navigated to that brand page and can see products")

@@ -2,7 +2,7 @@ package automationExercise.stepDefinitions;
 
 import automationExercise.pages.AutomationExercisePage;
 import automationExercise.utilities.Driver;
-import automationExercise.utilities.WaitUtils;
+import automationExercise.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -33,7 +33,7 @@ public class TC08StepDefinitions {
     @And("Click on 'View Product' of first product")
     public void clickOnViewProductOfFirstProduct() {
         automationExercisePage.viewProduct.click();
-        WaitUtils.waitFor(3);
+        ReusableMethods.waitFor(3);
     }
 
     @And("User is landed to product detail page")

@@ -2,7 +2,7 @@ package automationExercise.stepDefinitions;
 
 import automationExercise.pages.AutomationExercisePage;
 import automationExercise.utilities.Driver;
-import automationExercise.utilities.WaitUtils;
+import automationExercise.utilities.ReusableMethods;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -56,7 +56,7 @@ public class TC06StepDefinitions {
     @When("Click 'Home' button and verify that landed to home page successfully")
     public void clickHomeButtonAndVerifyThatLandedToHomePageSuccessfully() throws InterruptedException {
         automationExercisePage.homeButton.click();
-        WaitUtils.waitFor(3);
+        ReusableMethods.waitFor(3);
         Assert.assertEquals("Automation Exercise",Driver.getDriver().getTitle());
 
     }

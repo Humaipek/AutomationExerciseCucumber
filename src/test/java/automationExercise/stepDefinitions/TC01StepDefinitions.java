@@ -3,6 +3,7 @@ package automationExercise.stepDefinitions;
 import automationExercise.pages.AutomationExercisePage;
 import automationExercise.utilities.ConfigReader;
 import automationExercise.utilities.Driver;
+import automationExercise.utilities.ReusableMethods;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -10,16 +11,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+
+import java.net.MalformedURLException;
 
 public class TC01StepDefinitions {
     AutomationExercisePage automationExercisePage=new AutomationExercisePage();
     Faker faker=new Faker();
     @Given("Navigate to url")
-    public void navigateToUrl() {
+    public void navigateToUrl() throws MalformedURLException {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         if (automationExercisePage.cookieConsent.isDisplayed()){
             automationExercisePage.cookieConsent.click();
+        }else {
+            System.out.println("not cookies");
         }
     }
 

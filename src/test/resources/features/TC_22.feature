@@ -1,11 +1,9 @@
-   @TC21
+   @TC22
   Feature: Automation Exercise
-    Scenario: TC21   Add review on product
+    Scenario: TC22   Add to cart from Recommended items
       Given Navigate to url
-      When Click on 'Products' button
-      Then Verify user is navigated to ALL PRODUCTS page successfully
-      And Click on 'View Product' button
-      Then Verify 'Write Your Review' is visible
-      When Enter name, email and review
-      And Click 'Submit' button review
-      Then Verify success message 'Thank you for your review.'
+      When Scroll to bottom of page
+      Then Verify 'RECOMMENDED ITEMS' are visible
+      When Click on 'Add To Cart' on Recommended product
+      And Click 'View Cart' button
+      Then Verify that product is displayed in cart page

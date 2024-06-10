@@ -13,11 +13,12 @@ public class Hook {
 
    @After
     public void tearDown() throws Exception {
-        Driver.getDriver().close();
+        Driver.closeDriver();
     }
     public static Faker faker = new Faker();
     public static String email;
     public static String password;
+
     @Before("@TC02 or @TC04 or @TC05 or @TC16 or @TC20")
     public void registerAccount() throws Exception {
         AutomationExercisePage automationExercisePage=new AutomationExercisePage();
@@ -26,6 +27,8 @@ public class Hook {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         if (automationExercisePage.cookieConsent.isDisplayed()){
             automationExercisePage.cookieConsent.click();
+        }else {
+            System.out.println("not cookies");
         }
         automationExercisePage.signUpLogin.click();
         automationExercisePage.signUpName.sendKeys(faker.name().firstName(), Keys.TAB,

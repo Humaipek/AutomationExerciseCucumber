@@ -289,6 +289,45 @@ public class AutomationExercisePage {
     @FindBy(xpath= "//div[@class='productinfo text-center']/a")
     public List<WebElement> addProductsToCart;
 
+    @FindBy(xpath= "//a[.='Write Your Review']")
+    public WebElement writeYourReview;
+
+    @FindBy(id= "name")
+    public WebElement reviewName;
+
+    @FindBy(xpath= "//span[.='Thank you for your review.']")
+    public WebElement successMessageThankYouForYourReview;
+
+    @FindBy(xpath= "//form/button[@id='button-review']")
+    public WebElement submitButtonRewiew;
+
+    @FindBy(xpath= "//*[.='recommended items']")
+    public WebElement scrollToBottomOfPage;
+
+    @FindBy(xpath= "(//a[@data-product-id='4'])[1]")
+    public WebElement product;
+
+    @FindBy(id= "address_delivery")
+    public List<WebElement> deliveryAddress;
+
+    @FindBy(id= "address_invoice")
+    public List<WebElement> billingAddress;
+
+    @FindBy(partialLinkText= "Download Invoice")
+    public WebElement downloadInvoice;
+
+    @FindBy(id= "scrollUp")
+    public WebElement scrollUp;
+
+    @FindBy(xpath= "//*[.='Full-Fledged practice website for Automation Engineers']")
+    public WebElement fullFledgedText;
+
+    @FindBy(css= "a[style='position: fixed; z-index: 2147483647; display: none;']")
+    public WebElement style;
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@
       When  Click on 'Signup  Login' button
       And Fill all details in Signup and create account
       Then Verify 'ACCOUNT CREATED!' and click 'Continue' button
-      Then Verify 'Logged in as username' at top
+      Then Verify ' Logged in as username' at top
       When Add products to cart
       And Click 'Cart' button
       Then Verify that cart page is displayed

@@ -2,7 +2,7 @@ package automationExercise.stepDefinitions;
 
 import automationExercise.pages.AutomationExercisePage;
 import automationExercise.utilities.Driver;
-import automationExercise.utilities.WaitUtils;
+import automationExercise.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -35,7 +35,7 @@ public class TC18StepDefinitions {
     public void onLeftSideBarClickOnAnySubCategoryLinkOfMenCategory() {
         automationExercisePage.menCategory.click();
         automationExercisePage.tshirtsCategory.click();
-        WaitUtils.waitFor(5);
+        ReusableMethods.waitFor(5);
 
     }
 

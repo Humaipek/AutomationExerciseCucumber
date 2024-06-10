@@ -1,7 +1,9 @@
 package automationExercise.stepDefinitions;
 
+import automationExercise.hooks.Hook;
 import automationExercise.pages.AutomationExercisePage;
 import automationExercise.utilities.Driver;
+import automationExercise.utilities.ReusableMethods;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -11,7 +13,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-public class TC14StepDefinitions {
+public class TC14StepDefinitions extends ReusableMethods {
     AutomationExercisePage automationExercisePage=new AutomationExercisePage();
     Faker faker=new Faker();
     @When("Add products to cart")
@@ -28,7 +30,8 @@ public class TC14StepDefinitions {
 
     @And("Fill all details in Signup and create account")
     public void fillAllDetailsInSignupAndCreateAccount() {
-        automationExercisePage.signUpName.sendKeys(faker.name().firstName(), Keys.TAB,
+
+        automationExercisePage.signUpName.sendKeys(name, Keys.TAB,
                 faker.internet().emailAddress());
         automationExercisePage.signUpButton.click();
 
@@ -36,26 +39,26 @@ public class TC14StepDefinitions {
 
         automationExercisePage.name.clear();
 
-        automationExercisePage.name.sendKeys(faker.name().firstName());
+        automationExercisePage.name.sendKeys(name);
 
         automationExercisePage.password.sendKeys(faker.internet().password(), Keys.TAB,
                 "24", Keys.TAB,"September",Keys.TAB,"1978");
         automationExercisePage.selectSignupForOurNewsletter.click();
         automationExercisePage.selectReceiveSpecialOffersFromOurPartners.click();
-        automationExercisePage.firstName.sendKeys(faker.name().firstName(), Keys.TAB,
-                faker.name().lastName(),Keys.TAB,
-                faker.company().name(),Keys.TAB,
-                faker.address().streetAddress(),Keys.TAB,
-                faker.address().secondaryAddress(),Keys.TAB,
+        automationExercisePage.firstName.sendKeys(name, Keys.TAB,
+                lastName,Keys.TAB,
+                companyName,Keys.TAB,
+                streetAddress,Keys.TAB,
+                streetAddress2,Keys.TAB,
                 "India",Keys.TAB,
-                faker.address().state(),Keys.TAB,
-                faker.address().city(),Keys.TAB,
-                faker.address().zipCode(),Keys.TAB,
-                faker.phoneNumber().cellPhone());
+                state,Keys.TAB,
+                city,Keys.TAB,
+                zipCode,Keys.TAB,
+                phoneNumber);
         automationExercisePage.createAccountButton.click();
     }
     
-    @Then("Verify 'Logged in as username' at top")
+    @Then("Verify ' Logged in as username' at top")
     public void verifyLoggedInAsUsernameAtTop() {
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_UP).perform();
